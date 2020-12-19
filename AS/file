@@ -1,0 +1,4 @@
+TYPE = A 
+NAME=fibonacci.com
+VALUE =172.19.0.4
+TTL=10

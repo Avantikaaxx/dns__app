@@ -1,0 +1,17 @@
+###### Simplified authoritative server for a network of applications
+
+The system that we implement has three components:
+1. User Server : It is a simple HTTP web server (e.g. Flask), running in port 8080, that accepts a GET HTTP requests in path: 
+“/fibonacci?hostname=fibonacci.com&fs_port=K&number=X&as_ip=Y&as_port= Z”
+2. Fibonacci Server : It is an HTTP web server, running in port 9090, that provides the Fibonacci value for a given sequence number X. 
+It performs- Hostname Specification and Registration to Authoritative Server.
+3. Authoritative Server: It is the authoritative server for US. It has two duties. First is to handle the registration requests to pair hostnames to IP,
+second is to be able to respond to DNS queries from clients
+
+
+Three server specific folders have been created:
+  "US"-User Server
+  "FS"-Fibonacci Server
+  "AS"-Authoritative Server
+
+Each folder contains the Docker file and all the files that the dockerfile needs in order to run the specific server.
